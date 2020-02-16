@@ -1,10 +1,10 @@
 # Kabuki Tek Toolkit
 
-The Kabuki Tek Toolkit (kabuki.tek) is an Embedded-C++ [Script2™](github.com/kabuki-starship/script2) Firmware Development Kit (FDK).
+The Kabuki Tek Toolkit is a Modern Embedded-C++ [Script2™](https://github.com/kabuki-starship/script2) Firmware Development Kit (FDK).
 
 ## Mission and Vision
 
-The mission of kabuki.tek is to help you create robust firmware drivers faster and more reliably with Script2. Our vision is to create a the [Interactive Gym Environment & Educational Kit]](https://github.com/kabuki-starship/igeek) to create, test, and simulate robots and greentech hardware.
+The mission of Kabuki Tek Toolkit is to provide the tools you need to make intelligent connected robots, maker projects, & consumer electronics with [Interactive Gym Environment & Educational Kit™](https://github.com/kabuki-starship/igeek). Our vision is the virtualize the entire robot and Internet of Things in a sandbox.
 
 ## License
 

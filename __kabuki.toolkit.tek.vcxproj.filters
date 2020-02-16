@@ -93,6 +93,27 @@
     <None Include="_config.inl">
       <Filter>./</Filter>
     </None>
+    <None Include="_seams\_release.inl">
+      <Filter>./\seams</Filter>
+    </None>
+    <None Include="_seams\_undef.inl">
+      <Filter>./\seams</Filter>
+    </None>
+    <None Include="_seams\00.core.inl">
+      <Filter>./\seams</Filter>
+    </None>
+    <None Include="_seams\all.inl">
+      <Filter>./\seams</Filter>
+    </None>
+    <None Include="_seams\readme.md">
+      <Filter>./\seams</Filter>
+    </None>
+    <None Include="_seams\release.inl">
+      <Filter>./\seams</Filter>
+    </None>
+    <None Include="_seams\_debug.inl">
+      <Filter>./\seams</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="button.h">
@@ -200,5 +221,10 @@
     <ClInclude Include="_config.h">
       <Filter>./</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_seams\main.cpp">
+      <Filter>./\seams</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

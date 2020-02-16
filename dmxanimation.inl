@@ -1,7 +1,7 @@
 /* Kabuki Tek Toolkit @version 0.x
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /dmx_animation.inl
-@author  Cale McCollough <https://calemccollough.github.io>
+@author  Cale McCollough <https://cookingwithcale.org>
 @license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
@@ -44,7 +44,7 @@ void DmxAnimation::SetChase(IUA chaseNumber) {}
 
 void DmxAnimation::RandomizeSceneVariant() {}
 
-void DmxAnimation::SetRGBColor(IUB channel, CRGBAUI4 color) {
+void DmxAnimation::SetRGBColor(IUB channel, CRGBA color) {
   const IUB rGBChannelCutoff = 512 - 9;
   //< We need 9 bytes in our cue for this operation.
 
@@ -101,7 +101,7 @@ void DmxAnimation::SetRGBColor(IUB channel, CRGBAUI4 color) {
 void DmxAnimation::SetColor(IUB channel, IUA Red, IUA Green, IUA Blue) {
   if (channel > 511 - 3) {
     // We need 3 channels for an RGB color.
-    printf("Error in SetColor  (IUB, CRGBAUI4): channel out of range!\r\n");
+    printf("Error in SetColor  (IUB, CRGBA): channel out of range!\r\n");
     return;
   }
 
@@ -110,10 +110,10 @@ void DmxAnimation::SetColor(IUB channel, IUA Red, IUA Green, IUA Blue) {
   data_[channel + 2] = Blue;
 }
 
-void DmxAnimation::SetColor(IUB channel, CRGBAUI4 color) {
+void DmxAnimation::SetColor(IUB channel, CRGBA color) {
   if (channel > 511 - 3) {
     // We need 3 channels for an RGB color.
-    printf("Error in SetColor  (IUB, CRGBAUI4): channel out of range!\r\n");
+    printf("Error in SetColor  (IUB, CRGBA): channel out of range!\r\n");
     return;
   }
 
@@ -123,11 +123,11 @@ void DmxAnimation::SetColor(IUB channel, CRGBAUI4 color) {
 }
 
 /*
-void DmxAnimation::SetColor  (IUB channel, CRGBAUI4 color)
+void DmxAnimation::SetColor  (IUB channel, CRGBA color)
 {
     if  (channel > 511 - 3)             //< We need 3 channels for an RGB color.
     {
-        printf ("Error in SetColor  (IUB, CRGBAUI4): channel out of range!\r\n");
+        printf ("Error in SetColor  (IUB, CRGBA): channel out of range!\r\n");
         return;
     }
     FPC alphaValue =  (FPC) ((color & 0xFF000000) >> 24),
@@ -140,7 +140,7 @@ void DmxAnimation::SetColor  (IUB channel, CRGBAUI4 color)
     data[channel + 2] =  (IUA)  (Blue  * alphaValue);    //< Blue
 }
 
-void DmxAnimation::SetAllColors  (CRGBAUI4 color)
+void DmxAnimation::SetAllColors  (CRGBA color)
 {
     for  (ISC i = 0; i < numBasePairs; ++i)
     {
@@ -156,7 +156,7 @@ void DmxAnimation::SetAllColors  (CRGBAUI4 color)
 }
 */
 
-void DmxAnimation::SetAllColors(CRGBAUI4 color) {
+void DmxAnimation::SetAllColors(CRGBA color) {
   /*
   for  (ISC i = 0; i < numChannels; ++i)
   {
@@ -172,7 +172,7 @@ void DmxAnimation::SetAllColors(CRGBAUI4 color) {
   */
 }
 
-CRGBAUI4 DmxAnimation::IncreaseBrightness(CRGBAUI4 color, IUA brightness_change) {
+CRGBA DmxAnimation::IncreaseBrightness(CRGBA color, IUA brightness_change) {
   IUC brightness = (color & 0xFF000000) >> 24;
   //< Mask off MSB and shift into LSB.
   color = (color & 0x00FFFFFF);
@@ -184,7 +184,7 @@ CRGBAUI4 DmxAnimation::IncreaseBrightness(CRGBAUI4 color, IUA brightness_change)
   return color & brightness;
 }
 
-CRGBAUI4 DmxAnimation::DecreaseBrightness(CRGBAUI4 color, IUA brightness_change) {
+CRGBA DmxAnimation::DecreaseBrightness(CRGBA color, IUA brightness_change) {
   IUC brightness = (color & 0xFF000000) >> 24;
   //< Mask off MSB and shift into LSB.
   color = (color & 0x00FFFFFF);

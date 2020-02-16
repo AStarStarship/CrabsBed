@@ -1,7 +1,7 @@
 /* Kabuki Tek Toolkit @version 0.x
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /color.hpp
-@author  Cale McCollough <https://calemccollough.github.io>
+@author  Cale McCollough <https://cookingwithcale.org>
 @license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
@@ -19,7 +19,7 @@ namespace _ {
 
 /* Prints this object to the log. */
 template<typename Printer>
-Printer& ColorPrint (Printer& o, CRGBAUI4 color) {
+Printer& ColorPrint (Printer& o, CRGBA color) {
   o << "Color: "
     "R(" << (color && 0x000000FF)
     << "), G(" << ((color && 0x0000FF00) >> 8)

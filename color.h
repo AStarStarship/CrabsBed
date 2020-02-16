@@ -1,7 +1,7 @@
 /* Kabuki Tek Toolkit @version 0.x
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /color.h
-@author  Cale McCollough <https://calemccollough.github.io>
+@author  Cale McCollough <https://cookingwithcale.org>
 @license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
@@ -14,7 +14,7 @@ at <https://mozilla.org/MPL/2.0/>. */
 #define KABUKI_FEATURES_LIGHTS_COLOR_C 1
 
 // A ABGR Color where A is brightness.
-typedef IUC CRGBAUI4;
+typedef IUC CRGBA;
 
 namespace _ {
 
@@ -52,68 +52,68 @@ enum {
 };
 
 /* Returns a pointer to an array of the rainbow colors. */
-const CRGBAUI4* RainbowColors ();
+const CRGBA* RainbowColors ();
 
 /* Returns a pointer to an array of the present colors. */
-const CRGBAUI4* PresetColors ();
+const CRGBA* PresetColors ();
 
 /* Gets one of the rainbow colors. */
-CRGBAUI4 ColorRainbow (ISC index);
+CRGBA ColorRainbow (ISC index);
 
 /* Gets one of the preset colors. */
-CRGBAUI4 ColorPreset (ISC index);
+CRGBA ColorPreset (ISC index);
 
 /* Gets a random preset colors. */
-CRGBAUI4 RandomPresetColor ();
+CRGBA RandomPresetColor ();
 
 /* Gets a random color. */
-CRGBAUI4 RandomColor (ISC index);
+CRGBA RandomColor (ISC index);
     
 /* Mixes the color with the  */
-CRGBAUI4 ColorMix (CRGBAUI4 a, CRGBAUI4 b);
+CRGBA ColorMix (CRGBA a, CRGBA b);
 
 /* Increases the alpha value of the given color by the given delta. */
-CRGBAUI4 ChangeBrightness (CRGBAUI4 color, ISC delta);
+CRGBA ChangeBrightness (CRGBA color, ISC delta);
 
 /* Increases the alpha value of the given color by the given delta. */
-CRGBAUI4 DecreaseBrightness (CRGBAUI4 color, ISC delta);
+CRGBA DecreaseBrightness (CRGBA color, ISC delta);
 
 /* Creates a Color from the given RGB values. */
-CRGBAUI4 ColorMake (IUA red, IUA green, IUA blue);
+CRGBA ColorMake (IUA red, IUA green, IUA blue);
 
 /* Creates a Color from the given RGBA values. */
-CRGBAUI4 ColorMake (IUA red, IUA green, IUA blue, IUA alpha);
+CRGBA ColorMake (IUA red, IUA green, IUA blue, IUA alpha);
 
 /* Gets the red value. */
-IUA ColorGetRed (CRGBAUI4 color);
+IUA ColorGetRed (CRGBA color);
 
 /* Sets the red value. */
-void ColorSetRed (CRGBAUI4 color, IUA value);
+void ColorSetRed (CRGBA color, IUA value);
 
 /* Gets the green value. */
-IUA ColorGetGreen (CRGBAUI4 color);
+IUA ColorGetGreen (CRGBA color);
 
 /* Sets the green value. */
-void ColorSetGreen (CRGBAUI4 color, IUA value);
+void ColorSetGreen (CRGBA color, IUA value);
 
 /* Gets the blue value. */
-IUA ColorGetBlue (CRGBAUI4 color);
+IUA ColorGetBlue (CRGBA color);
 
 /* Sets the blue value. */
-void ColorSetBlue (CRGBAUI4 color, IUA value);
+void ColorSetBlue (CRGBA color, IUA value);
 
 /* Gets the alpha value. */
-IUA ColorGetAlpha (CRGBAUI4 color);
+IUA ColorGetAlpha (CRGBA color);
 
 /* Sets the alpha value. */
-void ColorSetAlpha (CRGBAUI4 color, IUA value);
+void ColorSetAlpha (CRGBA color, IUA value);
 
 /* Converts this color to HSV. */
-void ColorToHSV (CRGBAUI4 color, FPC& fR, FPC& fG, FPC fB,
+void ColorToHSV (CRGBA color, FPC& fR, FPC& fG, FPC fB,
                  FPC& fH, FPC& fS, FPC& fV);
 
 /* Sets this color to the HSV values. */
-void ColorSetHSV (CRGBAUI4 color, FPC& fR, FPC& fG, FPC& fB,
+void ColorSetHSV (CRGBA color, FPC& fR, FPC& fG, FPC& fB,
                   FPC& fH, FPC& fS, FPC& fV);
 
 } //< namespace _

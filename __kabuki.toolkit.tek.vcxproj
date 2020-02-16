@@ -46,6 +46,13 @@
     <None Include="_debug.inl" />
     <None Include="_library.inl" />
     <None Include="_release.inl" />
+    <None Include="_seams\00.core.inl" />
+    <None Include="_seams\all.inl" />
+    <None Include="_seams\readme.md" />
+    <None Include="_seams\release.inl" />
+    <None Include="_seams\_debug.inl" />
+    <None Include="_seams\_release.inl" />
+    <None Include="_seams\_undef.inl" />
     <None Include="_undef.inl" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +91,9 @@
     <ClInclude Include="switch.h" />
     <ClInclude Include="unicontroller.h" />
     <ClInclude Include="_config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_seams\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

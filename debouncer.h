@@ -1,7 +1,7 @@
 /* Kabuki Tek Toolkit @version 0.x
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /debouncer.h
-@author  Cale McCollough <https://calemccollough.github.io>
+@author  Cale McCollough <https://cookingwithcale.org>
 @license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
@@ -101,7 +101,7 @@ BlueLED (LED_BLUE);
 
 PortIn GPIPort (PortA);
 
-void pollInputsHandler () {
+void PollInputsHandler () {
   Spi1CS = 1;
   CHA dataIn = ShiftRegisterDebouncer.debounce (Spi1.write (0));
   ISC portA = GPIPortDebouncer.debounce (GPIPort);

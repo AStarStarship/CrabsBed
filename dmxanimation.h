@@ -1,7 +1,7 @@
 /* Kabuki Tek Toolkit @version 0.x
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /dmx_animation.h
-@author  Cale McCollough <https://calemccollough.github.io>
+@author  Cale McCollough <https://cookingwithcale.org>
 @license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
@@ -45,7 +45,7 @@ class DmxAnimation {
   void SetChannelData(IUB Channel, IUA value);
 
   /* Function sets an RGB color starting at the given channel. */
-  void SetRGBColor(IUB Channel, CRGBAUI4 value);
+  void SetRGBColor(IUB Channel, CRGBA value);
 
   /* Randomizes the currentVariant */
   void RandomizeVariant();
@@ -54,10 +54,10 @@ class DmxAnimation {
   void SetChase(IUA chaseNumber);
   void RandomizeSceneVariant();
   void SetColor(IUB channel, IUA red, IUA green, IUA blue);
-  void SetColor(IUB channel, CRGBAUI4 color);
-  void SetAllColors(CRGBAUI4 color);
-  CRGBAUI4 IncreaseBrightness(CRGBAUI4 color, IUA brightness_change);
-  CRGBAUI4 DecreaseBrightness(CRGBAUI4 color, IUA brightness_change);
+  void SetColor(IUB channel, CRGBA color);
+  void SetAllColors(CRGBA color);
+  CRGBA IncreaseBrightness(CRGBA color, IUA brightness_change);
+  CRGBA DecreaseBrightness(CRGBA color, IUA brightness_change);
 
  protected:
   IUA param1_,                //< Animation parameter 1/Red.

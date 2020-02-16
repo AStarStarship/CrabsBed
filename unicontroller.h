@@ -132,8 +132,8 @@ class Unicontroller {
       num_rgb_leds_,    //< Number of LEDRGB(s).
       num_buttons_,     //< Number of Button(s).
       num_pots_,        //< Number of Pot(s).
-      num_knobs_,       //< Number of RotoaryKnob(s).
-      num_knob_banks_,  //< Number of RotoaryKnobBank(s).
+      num_knobs_,       //< Number of RotaryKnob(s).
+      num_knob_banks_,  //< Number of RotaryKnobBank(s).
       // num_ports_in_,  //< Number of PortIn(s).
       num_expanders_;                  //< Number of IoExpander(s).
   Ticker ticker_;                      //< Controls update Ticker.

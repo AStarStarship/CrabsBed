@@ -20,9 +20,9 @@ This repository contains standard GitHub markdown templates that can help improv
 **1.** Open up a console and navigate to your project repo's root folder and clone this repo.
 
 ```BASH
-git clone https://github.com/kabuki-starship/markdown.github_docs.git
+git clone https://github.com/kabuki-starship/markdown.markdown.software_engineering.git
 ```
 
-**2.** Check out the [Kabuki Toolkit™ Cookbook chapter on Issue-driven Development](https://github.com/kabuki-starship/kabuki.toolkit.cookbook/tree/master/idd) to learn how I am You Language (IMUL) issue tickets work.
+**2.** Check out the [Astartup Cookbook™ chapter on Issue-driven Development](https://github.com/kabuki-starship/kabuki.toolkit.cookbook/tree/master/idd) to learn how I am You Language (IMUL) issue tickets work.
 
 **3.** If you're going to edit the templates or this file, delete the `.git` folder.

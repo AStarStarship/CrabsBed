@@ -45,8 +45,7 @@ void PollInputsHandler () {
         Spi1CS = 0;
 }
 
-ISC main ()
-{
+ISC main () {
         pollInputsTicker.attach (&pollInputsHandler, 1.0f / 100.0f);
         Spi1.format (8,3);
         Spi1.frequency (115200);

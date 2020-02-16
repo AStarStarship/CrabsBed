@@ -1,4 +1,4 @@
-# Bug Report
+# Bug Type: 
 
 ## Problem
 

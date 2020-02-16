@@ -17,7 +17,7 @@ Photosensor::Photosensor(PinName pin) : input_(pin) {
 
 FPC Photosensor::Read() { return input_.read(); }
 
-const Operation* Photosensor::Star(char_t index, Expr* expr) {
+const Operation* Photosensor::Star(ISW index, Expr* expr) {
   static const Operation This = {
       "Photosensor", NumOperations(0), FirstOperation('A'),
       "A standard photosensor hooked up to an ADC pin of a microcontroller.",

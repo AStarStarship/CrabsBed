@@ -2,13 +2,13 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /led_status.h
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
 
 #pragma once
-#include <module_config.h>
+#include <_config.h>
 #ifndef KABUKI_TEK_STATUS_LED
 #define KABUKI_TEK_STATUS_LED 1
 
@@ -62,7 +62,7 @@ const CHA* examplePattern[] = {
 statusLED.SetPattern  (exapmlePattern, 1.5f);
 @endcode
 */
-template <SIC On, SIC Off>
+template <ISC On, ISC Off>
 class StatusLED {
  public:
   static const FPC DefaultFrequency = 0.5f,  //< Default frequency in hertz.
@@ -273,7 +273,7 @@ void SwitchIRQHandler () {
     }
 }
 
-SIC main () {
+ISC main () {
     printf ("\r\n\nTesting mbed Utils.\r\n\n");
     PrintLine ();
 

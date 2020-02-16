@@ -2,7 +2,7 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /switch.inl
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
@@ -26,12 +26,12 @@ const Operation* Switch::Star(char_t index, Expr* expr) {
     case '?':
       return &This;
     case 'a': {
-      static const Operation OpA = {"Read", Params<1, SIC>(), Params<NIL>(),
+      static const Operation OpA = {"Read", Params<1, ISC>(), Params<NIL>(),
                                     "Reads the switch state."};
       if (!expr) return &OpA;
 
-      SIC temp = 0;  // input;
-      UIA switchState = (UIA)temp;
+      ISC temp = 0;  // input;
+      IUA switchState = (IUA)temp;
 
       return Result(expr, Params<NIL>(), Args(args, &switchState));
     }

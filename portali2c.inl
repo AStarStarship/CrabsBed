@@ -2,7 +2,7 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /portal.inl
 @author  Cale McCollough <https://cale-mccollough.github.io>
-@license Copyright (C) 2014-9 Cale McCollough; all right reserved (R). 
+@license Copyright (C) 2014-20 Cale McCollough; all right reserved (R). 
 This Source Code Form is subject to the terms of the Mozilla Public License, 
 v. 2.0. If a copy of the MPL was not distributed with this file, You can 
 obtain one at https://mozilla.org/MPL/2.0/. */
@@ -22,10 +22,10 @@ void I2cPortal::Feed() {
 
 void I2cPortal::Pull() {
   /*
-      //const SIC addr7bit = 0x48;      // 7-bit I2C address.
-      const SIC addr8bit = 0x48 << 1; // 8-bit I2C address: 0x90.
+      //const ISC addr7bit = 0x48;      // 7-bit I2C address.
+      const ISC addr8bit = 0x48 << 1; // 8-bit I2C address: 0x90.
 
-      UIA cmd[80]; //< @todo what size do  I need?
+      IUA cmd[80]; //< @todo what size do  I need?
       cmd[0] = 0x01;
       cmd[1] = 0x00;
       i2c_.write (addr8bit, cmd, 2);

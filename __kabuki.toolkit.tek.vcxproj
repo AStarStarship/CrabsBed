@@ -18,13 +18,80 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="button.inl" />
+    <None Include="color.inl" />
+    <None Include="dmxanimation.inl" />
+    <None Include="dmxbuffer.inl" />
+    <None Include="flowcontroller.inl" />
+    <None Include="flyingfader.inl" />
+    <None Include="ioexpander.inl" />
+    <None Include="knobrotary.inl" />
+    <None Include="knobrotarybank.inl" />
+    <None Include="led.inl" />
+    <None Include="ledrgb.inl" />
+    <None Include="main.inl" />
+    <None Include="micelectrolytic.inl" />
+    <None Include="motorhbridge.inl" />
+    <None Include="portali2c.inl" />
+    <None Include="portalserial.inl" />
+    <None Include="portalspi.inl" />
+    <None Include="portaltcp.inl" />
+    <None Include="pot.inl" />
+    <None Include="potosensor.inl" />
+    <None Include="readme.md" />
+    <None Include="switch.inl" />
+    <None Include="unicontroller.inl" />
+    <None Include="_config.inl" />
+    <None Include="_debug.inl" />
+    <None Include="_library.inl" />
+    <None Include="_release.inl" />
+    <None Include="_undef.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="button.h" />
+    <ClInclude Include="color.h" />
+    <ClInclude Include="color.hpp" />
+    <ClInclude Include="debouncer.h" />
+    <ClInclude Include="display.h" />
+    <ClInclude Include="dmxanimation.h" />
+    <ClInclude Include="dmxbuffer.h" />
+    <ClInclude Include="dmxreceiver.h" />
+    <ClInclude Include="dmxtransceiver.h" />
+    <ClInclude Include="flowcontroller.h" />
+    <ClInclude Include="flyingfader.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="ioexpander.h" />
+    <ClInclude Include="led.h" />
+    <ClInclude Include="ledmatrix.h" />
+    <ClInclude Include="ledrgb.h" />
+    <ClInclude Include="ledvumeter.h" />
+    <ClInclude Include="ledvumeterarray.h" />
+    <ClInclude Include="micelectrolytic.h" />
+    <ClInclude Include="motorhbridge.h" />
+    <ClInclude Include="octows28xx.h" />
+    <ClInclude Include="photosensor.h" />
+    <ClInclude Include="portali2c.h" />
+    <ClInclude Include="portalserial.h" />
+    <ClInclude Include="portalspi.h" />
+    <ClInclude Include="portaltcp.h" />
+    <ClInclude Include="portalwifi.h" />
+    <ClInclude Include="pot.h" />
+    <ClInclude Include="rgbstatusled.h" />
+    <ClInclude Include="rotaryknob.h" />
+    <ClInclude Include="rotaryknobbank.h" />
+    <ClInclude Include="statusled.h" />
+    <ClInclude Include="switch.h" />
+    <ClInclude Include="unicontroller.h" />
+    <ClInclude Include="_config.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{B9ACE399-A0DE-49A8-9BED-7D5386BD2D6F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>kabukisdkdata</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>igeek.mbed</ProjectName>
+    <ProjectName>kabuki.toolkit.tek</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

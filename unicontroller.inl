@@ -2,7 +2,7 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /unicontroller.inl
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
@@ -11,7 +11,7 @@ at <https://mozilla.org/MPL/2.0/>. */
 
 namespace _ {
 
-Unicontroller::Unicontroller(UIA* mixer, ch_t num_channels, Led** leds,
+Unicontroller::Unicontroller(IUA* mixer, ch_t num_channels, Led** leds,
                              ch_t num_leds, LEDRGB** rgb_leds,
                              ch_t num_rgb_leds, Button** buttons,
                              ch_t num_buttons, Pot** pots, ch_t num_pots,
@@ -44,7 +44,7 @@ Unicontroller::Unicontroller(UIA* mixer, ch_t num_channels, Led** leds,
       // ports_in_       (ports_in),
       mixer_(mixer) {
   ch_t longest_chain = 0, i;
-  UIA temp;
+  IUA temp;
 
   for (i = 0; i < num_expanders; ++i) {
     temp = extra_io_[i]->GetNumInBytes();
@@ -67,20 +67,20 @@ IoExpander** Unicontroller::GetIoExpanders() { return extra_io_; }
 
 Led** Unicontroller::GetLeds() { return leds_; }
 
-void Unicontroller::SetColorBalance(UIA r, UIA g, UIA b) {
+void Unicontroller::SetColorBalance(IUA r, IUA g, IUA b) {
   red_mix_ = r;
   green_mix_ = g;
   blue_mix_ = b;
 }
 
 void Unicontroller::PollInputs() {
-  // SIC i;
-  // UIB value;
+  // ISC i;
+  // IUB value;
 
   // poll potentiometers.
   // value = pot_1_->read_u16 ();
 
-  // SIC time_us = timer_.read_us ();
+  // ISC time_us = timer_.read_us ();
 
   // CPU ALU divide rounds down so add 1 to aligned memory if needed.
   // ch_t num_words = (num_in_bytes_ & 3) ? 1 : 0;
@@ -89,12 +89,12 @@ void Unicontroller::PollInputs() {
   // uintptr_t debounced_xor_[num_words];    //<
 
   // for (i = 0; i < num_words; ++i) {
-  //    debounced_xor_[i] = debouncers_[i].Debounce (*((SIC)DigitalIns));
+  //    debounced_xor_[i] = debouncers_[i].Debounce (*((ISC)DigitalIns));
   //}
 
   // Debounce General Purpose Input (GPI) Ports.
   // for (; i < num_words + NumGPIPorts; ++i) {
-  //    SIC temp   = PortsIn[i - num_words],
+  //    ISC temp   = PortsIn[i - num_words],
   //        result = debouncers_[i - num_words].Debounce (temp);
   //    debounced_xor_[i] = result;
   //}
@@ -105,27 +105,27 @@ void Unicontroller::PollInputs() {
   //}
 
   // Debounce rotary Encoders.
-  // SIC time = timer_.read_us ();
+  // ISC time = timer_.read_us ();
   // for (i = 0; i < num_encoders_; ++i)
   //    rotary_knobs_[i].Poll (this, i, debounced_xor_, time);
 }
 
 inline void Unicontroller::UpdateLEDs() {
-  SIB count = pulse_count_;  //< local copy.
+  ISB count = pulse_count_;  //< local copy.
   pulse_count_ = (--count < 0) ? num_pulses_ - 1 : count;
   //< Increment counter or loop around.
 
-  // for (SIC i = numLEDs - 1; i >= 0; --i)
+  // for (ISC i = numLEDs - 1; i >= 0; --i)
   //    lights_[i].Update ();
 
-  // for (SIC i = 0; i < num_led_ring_sets_; ++i) {
+  // for (ISC i = 0; i < num_led_ring_sets_; ++i) {
   //    //led_rings[i].Update (channels_, min_values_, max_values_,
   //                        count >> 8, count);
   //}
 }
 
 void Unicontroller::UpdateSpiByte() {
-  // for (SIC i = num_spi_ports_ - 1; i >= 0; --i)
+  // for (ISC i = num_spi_ports_ - 1; i >= 0; --i)
   //    spi_ports_[i].Update (spi_index_);
 
   if (++spi_index_ < longest_chain_) return;
@@ -135,6 +135,6 @@ void Unicontroller::UpdateSpiByte() {
   UpdateLEDs();
 }
 
-SIC Unicontroller::GetTimerCount() { return timer_.read_us(); }
+ISC Unicontroller::GetTimerCount() { return timer_.read_us(); }
 
 }  // namespace _

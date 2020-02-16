@@ -2,13 +2,13 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /led_status_rgb.h
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
 
 #pragma once
-#include <module_config.h>
+#include <_config.h>
 #ifndef KABUKI_TEK_RGBSTATUSLED
 #define KABUKI_TEK_RGBSTATUSLED 1
 
@@ -61,7 +61,7 @@ status_led.SetColorA  (Color::);
 
 @endcode
 */
-template <SIC On, SIC Off>
+template <ISC On, ISC Off>
 class RGBStatusLED {
  public:
   enum { DefaultBrightness = 128 };
@@ -221,7 +221,7 @@ InterruptIn Switch3 (SW3);
 
 /* Interrupt handler for SW2. */
 void SW3Handler () {
-    static SIC counter = 16;
+    static ISC counter = 16;
 
     if (++counter > 15) {
         Status.FlashRedBlue (); counter = 0;
@@ -234,7 +234,7 @@ void SW3Handler () {
     }
 }
 
-SIC main () {
+ISC main () {
     printf ("\r\nTesting mbed utils.\r\n");
     PrintLine ('-');
 

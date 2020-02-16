@@ -2,7 +2,7 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /led_rgb.inl
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
@@ -24,7 +24,7 @@ CRGBAUI4 LEDRGB::GetColor() { return color_; }
 
 void LEDRGB::SetColor(CRGBAUI4 value) { color_ = value; }
 
-UIA LEDRGB::GetRed() { return (UIA)color_; }
+IUA LEDRGB::GetRed() { return (IUA)color_; }
 
 void LEDRGB::SetRed(CRGBAUI4 value) {
   CRGBAUI4 color = 0xffff00ff;  //< Mask for removing red channel.
@@ -32,7 +32,7 @@ void LEDRGB::SetRed(CRGBAUI4 value) {
   color |= value << 8;         //< Add the new red channel.
 }
 
-UIA LEDRGB::GetGreen() { return (UIA)(color_ >> 8); }
+IUA LEDRGB::GetGreen() { return (IUA)(color_ >> 8); }
 
 void LEDRGB::SetGreen(CRGBAUI4 value) {
   CRGBAUI4 color = 0xffff00ff;  //< Mask for removing green channel.
@@ -40,7 +40,7 @@ void LEDRGB::SetGreen(CRGBAUI4 value) {
   color |= value << 8;         //< Add the new green channel.
 }
 
-UIA LEDRGB::GetBlue() { return (UIA)(color_ >> 16); }
+IUA LEDRGB::GetBlue() { return (IUA)(color_ >> 16); }
 
 void LEDRGB::SetBlue(CRGBAUI4 value) {
   CRGBAUI4 color = 0xff00ffff;  //< Mask for removing blue channel.
@@ -48,7 +48,7 @@ void LEDRGB::SetBlue(CRGBAUI4 value) {
   color |= value << 8;         //< Add the new blue channel.
 }
 
-UIA LEDRGB::GetBrightness() { return (UIA)(color_ >> 24); }
+IUA LEDRGB::GetBrightness() { return (IUA)(color_ >> 24); }
 
 void LEDRGB::SetBrightness(CRGBAUI4 value) {
   CRGBAUI4 color = 0x00ffffff;  //< Mask for removing brightness channel.

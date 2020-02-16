@@ -2,13 +2,13 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /portal_i2c.h
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
 
 #pragma once
-#include <module_config.h>
+#include <_config.h>
 #ifndef KABUKI_TEK_SPI_PORTAL
 #define KABUKI_TEK_SPI_PORTAL 1
 
@@ -29,7 +29,7 @@ class SpiPortal : public _::Portal {
 
  private:
   _::Expr* expr_;    //< Expr for this Portal.
-  SIC start_index_,  //< Start index of the buffer.
+  ISC start_index_,  //< Start index of the buffer.
       stop_index_,   //< Stop index of the buffer.
       buffer_size_;  //< Buffer size in bytes.
   SPI spi_;          //< SPI port.

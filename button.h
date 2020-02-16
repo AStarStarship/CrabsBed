@@ -2,13 +2,13 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /button.h
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
 
 #pragma once
-#include <module_config.h>
+#include <_config.h>
 #ifndef KABUKI_TEK_SENSOR_BUTTON
 #define KABUKI_TEK_SENSOR_BUTTON
 
@@ -18,7 +18,7 @@ namespace _ {
 
 /* A button stored as an offset.
 Buttons are composed of a unsigned integer type that stores the bit offset
-from the Controller. This bit offset then gets translated to a UIA offset
+from the Controller. This bit offset then gets translated to a IUA offset
 and a mask through some bit shifting.
 */
 class Button {
@@ -27,13 +27,13 @@ class Button {
   Button(offset_t bit);
 
   /* Gets the state of the button. */
-  inline UIA GetState(UIA* digital_ins);
+  inline IUA GetState(IUA* digital_ins);
 
   /* Polls the state of the switch using the debounced XOR. */
-  inline void Poll(UIA* debounced_xor);
+  inline void Poll(IUA* debounced_xor);
 
   /* Script operations. */
-  const _::Operation* Star(char_t index, _::Expr* expr);
+  const _::Op* Star(ISW index, _::Expr* expr);
 
  private:
   offset_t bit_offset_;  //< Offset to the packed button bits array.

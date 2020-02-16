@@ -2,13 +2,13 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /dmx_receiver.h
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
 
 #pragma once
-#include <module_config.h>
+#include <_config.h>
 #ifndef KABUKI_TEK_ELECTROLYTICMIC
 #define KABUKI_TEK_ELECTROLYTICMIC 1
 
@@ -23,28 +23,28 @@ class ElectrolyticMic {
   ElectrolyticMic(PinName pin);
 
   /* Sets the minimum value to the given value. */
-  UIB GetMin();
+  IUB GetMin();
 
   /* Sets the minimum value to the given value. */
-  void SetMin(UIB value);
+  void SetMin(IUB value);
 
   /* Gets the max value */
-  UIB GetMax();
+  IUB GetMax();
 
   /* Attempts to set the max to the new value. */
-  void SetMax(UIB value);
+  void SetMax(IUB value);
 
   /* Bounds the min and max. */
   void BoundMinMax();
 
   /* Reads the value of the microphone. */
-  UIB Read();
+  IUB Read();
 
   /* Prints this object to a terminal. */
   void Print();
 
  private:
-  UIB min_,         //< The normal min mic value.
+  IUB min_,         //< The normal min mic value.
       max_;         //< The normal max mic value.
   AnalogIn input_;  //< The analog input pin.
 };

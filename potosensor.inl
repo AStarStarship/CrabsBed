@@ -2,7 +2,7 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /sensor_photo.inl
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
@@ -30,13 +30,13 @@ const Operation* Photosensor::Star(char_t index, Expr* expr) {
     case '?':
       return &This;
     case 'A': {
-      static const Operation OpA = {"Read", Params<0>(), Params<1, UIB>(),
+      static const Operation OpA = {"Read", Params<0>(), Params<1, IUB>(),
                                     "Reads the light sensor.", 0};
       if (!expr) return &OpA;
 
-      UIB value = input_.read_u16();
+      IUB value = input_.read_u16();
 
-      return Result(expr, Params<1, UIB>(), Args(args, &value));
+      return Result(expr, Params<1, IUB>(), Args(args, &value));
     }
   }
   return nullptr;

@@ -8,4 +8,197 @@
       <UniqueIdentifier>{c9aea5e0-8970-4946-b65f-adac3979ec01}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="_debug.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="_library.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="_release.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="_undef.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="button.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="color.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="dmxanimation.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="dmxbuffer.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="flowcontroller.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="flyingfader.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="ioexpander.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="knobrotary.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="knobrotarybank.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="led.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="ledrgb.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="main.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="micelectrolytic.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="motorhbridge.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="portali2c.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="portalserial.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="portalspi.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="portaltcp.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="pot.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="potosensor.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="readme.md">
+      <Filter>./</Filter>
+    </None>
+    <None Include="switch.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="unicontroller.inl">
+      <Filter>./</Filter>
+    </None>
+    <None Include="_config.inl">
+      <Filter>./</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="button.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="color.hpp">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="debouncer.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="display.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="dmxanimation.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="dmxbuffer.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="dmxreceiver.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="dmxtransceiver.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="flowcontroller.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="flyingfader.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="ioexpander.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="led.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="ledmatrix.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="ledrgb.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="ledvumeter.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="ledvumeterarray.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="micelectrolytic.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="motorhbridge.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="octows28xx.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="photosensor.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="portali2c.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="portalserial.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="portalspi.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="portaltcp.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="portalwifi.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="pot.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="rgbstatusled.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="rotaryknob.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="rotaryknobbank.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="statusled.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="switch.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="unicontroller.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="_config.h">
+      <Filter>./</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

@@ -2,13 +2,13 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /unicontroller.h
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
 
 #pragma once
-#include <module_config.h>
+#include <_config.h>
 #ifndef KABUKI_TEK_UNICONTROLLER
 #define KABUKI_TEK_UNICONTROLLER 1
 
@@ -84,7 +84,7 @@ class Unicontroller {
 
   /* Default constructor.
   @param leds The LEDs. */
-  Unicontroller(UIA* mixer, ch_t num_channels, Led** leds, ch_t num_leds,
+  Unicontroller(IUA* mixer, ch_t num_channels, Led** leds, ch_t num_leds,
                 LEDRGB** rgb_leds, ch_t num_rgb_leds, Button** buttons,
                 ch_t num_buttons, Pot** Pots, ch_t num_pots, RotaryKnob** knobs,
                 ch_t num_knobs, RotaryKnobBank** knob_banks, ch_t num_banks,
@@ -99,7 +99,7 @@ class Unicontroller {
   LEDRGB** GetRgbLeds();
 
   /* Sets the RGB color mix for the LED. */
-  void SetColorBalance(UIA r, UIA g, UIA b);
+  void SetColorBalance(IUA r, IUA g, IUA b);
 
   /* Update interrupt for the SPI port.
   FastDebouncer returns an XOR containing the state of which switches
@@ -116,16 +116,16 @@ class Unicontroller {
   void UpdateSpiByte();
 
   /* Gets the timer count in microseconds. */
-  SIC GetTimerCount();
+  ISC GetTimerCount();
 
  private:
-  UIA brightness_,      //< Monochrome LED brightness.
+  IUA brightness_,      //< Monochrome LED brightness.
       red_mix_,         //< Red LED mix.
       green_mix_,       //< Green LED mix.
       blue_mix_;        //< Blue LED mix.
-  SIB pulse_count_,     //< PWM counter.
+  ISB pulse_count_,     //< PWM counter.
       num_pulses_;      //< PWM pulses per cycle(rows * 256).
-  ch_t spi_index_,      //< Index of the current SPI UIA.
+  ch_t spi_index_,      //< Index of the current SPI IUA.
       longest_chain_,   //< Longest SPI chain length.
       channel_count_,   //< Number of channels.
       num_leds_,        //< Number of Led(s).
@@ -146,7 +146,7 @@ class Unicontroller {
   Pot** pots_;                         //< Pointers to Pot(s).
   IoExpander** extra_io_;              //< Pointers to IoExpander(s).
   // PortIn              ** ports_in_;      //< Number of PortIn(s).
-  UIA* mixer_;  //< Mixer channels.
+  IUA* mixer_;  //< Mixer channels.
 };              //< class Unicontroller
 
 }  // namespace _

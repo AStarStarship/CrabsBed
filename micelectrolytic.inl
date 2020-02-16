@@ -2,7 +2,7 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /mic_electrolytic.inl
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
@@ -14,22 +14,22 @@ namespace _ {
 ElectrolyticMic::ElectrolyticMic(PinName pin)
     : min_(0), max_(~0), input_(pin) {}
 
-UIB ElectrolyticMic::GetMin() { return min_; }
+IUB ElectrolyticMic::GetMin() { return min_; }
 
-void ElectrolyticMic::SetMin(UIB value) {
+void ElectrolyticMic::SetMin(IUB value) {
   if (value > max_) return;
   min_ = value;
 }
 
-UIB ElectrolyticMic::GetMax() { return max_; }
+IUB ElectrolyticMic::GetMax() { return max_; }
 
-void ElectrolyticMic::SetMax(UIB value) {
+void ElectrolyticMic::SetMax(IUB value) {
   if (value < min_) return;
   max_ = value;
 }
 
 void ElectrolyticMic::BoundMinMax() {
-  UIB sample = input_.read_u16();
+  IUB sample = input_.read_u16();
 
   if (sample < min_)
     min_ = sample;
@@ -37,6 +37,6 @@ void ElectrolyticMic::BoundMinMax() {
     max_ = sample;
 }
 
-UIB ElectrolyticMic::Read() { return input_.read_u16(); }
+IUB ElectrolyticMic::Read() { return input_.read_u16(); }
 
 }  // namespace _

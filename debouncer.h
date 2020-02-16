@@ -2,13 +2,13 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /debouncer.h
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
 
 #pragma once
-#include <module_config.h>
+#include <_config.h>
 #ifndef KABUKI_TEK_SENSORS_DEBOUNCER
 #define KABUKI_TEK_SENSORS_DEBOUNCER
 
@@ -35,17 +35,17 @@ Ticker pollInputsTicker;
 PortIn GPIPort (PortA);
 
 CHA InputStates[5];
-Debouncer<SIC> GPIPortDebouncer ((SIC*)&InputStates[0]);
+Debouncer<ISC> GPIPortDebouncer ((ISC*)&InputStates[0]);
 Debouncer<CHA> ShiftRegisterDebouncer (&InputStates[4]);
 
 void PollInputsHandler () {
         Spi1CS = 1;
         CHA shift = ShiftRegisterDebouncer.Debounce (Spi1.write (0));
-        SIC portA = GPIPortDebouncer.Debounce (GPIPort);
+        ISC portA = GPIPortDebouncer.Debounce (GPIPort);
         Spi1CS = 0;
 }
 
-SIC main ()
+ISC main ()
 {
         pollInputsTicker.attach (&pollInputsHandler, 1.0f / 100.0f);
         Spi1.format (8,3);
@@ -105,7 +105,7 @@ PortIn GPIPort (PortA);
 void pollInputsHandler () {
   Spi1CS = 1;
   CHA dataIn = ShiftRegisterDebouncer.debounce (Spi1.write (0));
-  SIC portA = GPIPortDebouncer.debounce (GPIPort);
+  ISC portA = GPIPortDebouncer.debounce (GPIPort);
   if (dataIn & 0b001) RedLED = RedLED == 0?1:0;
   if (dataIn & 0b010) GreenLED = GreenLED == 0?1:0;
   if (dataIn & 0b100) BlueLED = BlueLED == 0?1:0;
@@ -113,7 +113,7 @@ void pollInputsHandler () {
   printf ("%x%x", dataIn, portA);
 }
 
-SIC main () {
+ISC main () {
   static const FPC updateInterval = 0.010f;
   PrintLine (" ", '=');
   pollInputsTicker.attach (&pollInputsHandler, updateInterval);

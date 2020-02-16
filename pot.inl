@@ -2,7 +2,7 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /pot.inl
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
@@ -15,8 +15,8 @@ Pot::Pot(ch_t channel, PinName adc_pin) : channel_(channel), ain_(adc_pin) {
   // Nothing to do here :-)
 }
 
-void Pot::Poll(UIB new_value, Expr* expr, UIB value, UIB min_value,
-               UIB max_channel) {}
+void Pot::Poll(IUB new_value, Expr* expr, IUB value, IUB min_value,
+               IUB max_channel) {}
 
 void Pot::Print(Log& log) { o << "Pot"; }
 
@@ -28,11 +28,11 @@ const _::Operation* Pot::Star(char_t index, _::Expr* expr) {
     case '?':
       return &This;
     case 'A': {
-      static const Operation OpA = {"Read", _::Params<0>(), _::Params<1, UIB>(),
+      static const Operation OpA = {"Read", _::Params<0>(), _::Params<1, IUB>(),
                                     "Reads the pot's value", 0};
       if (!expr) return &OpA;
-      UIB value = ain_.read_u16();
-      return Result(expr, _::Params<1, UIB>(), _::Args(args, &value));
+      IUB value = ain_.read_u16();
+      return Result(expr, _::Params<1, IUB>(), _::Args(args, &value));
     }
   }
   return nullptr;

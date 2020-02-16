@@ -2,13 +2,13 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /dmx_receiver.h
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
 
 #pragma once
-#include <module_config.h>
+#include <_config.h>
 #ifndef KABUKI_TEK_DMX_DMXRECIEVER_H
 #define KABUKI_TEK_DMX_DMXRECIEVER_H
 
@@ -17,7 +17,7 @@ namespace _ {
 /* DMXReceiver receiver.
 @param kChannelCount  The number of DMX channels  (must be less than 512).
  */
-template <UIC kChannelCount>
+template <IUC kChannelCount>
 class DMXReceiver {
  public:
   enum {
@@ -94,7 +94,7 @@ class DMXReceiver {
   /* Send the data
   @param Index DMX channel 0-511.
   @param Value   DMX channel data 0-255. */
-  void SetChannel(UIB Index, UIA Value) {
+  void SetChannel(IUB Index, IUA Value) {
     if (Index >= kNumDMXChannels || Index < StartChannel ||
         Index > StartChannel + kChannelCount - 1) {
       return;
@@ -106,7 +106,7 @@ class DMXReceiver {
   /* Gets the channel data at the given index.
   @param Index DMX channel 0-511.
   @param Value   DMX channel data 0-255. */
-  UIA GetChannel(UIC index) {
+  IUA GetChannel(IUC index) {
     if (index >= StartChannel + kChannelCount) return 0;
     return data[index];
   }
@@ -115,7 +115,7 @@ class DMXReceiver {
       @param Buffer  DMX data buffer
       @param Index DMX data address
       @param Length  Data length */
-  void Copy(UIA* Buffer, SIC Index = 0, SIC Length = kNumDMXChannels) {
+  void Copy(IUA* Buffer, ISC Index = 0, ISC Length = kNumDMXChannels) {
     if (Index >= kNumDMXChannels || Length > kNumDMXChannels - Index ||
         Buffer == nullptr)
       return;
@@ -140,7 +140,7 @@ class DMXReceiver {
 
   /* Clear DMX data */
   void Clear() {
-    SIC i;
+    ISC i;
 
     for (i = 0; i < kNumDMXChannels; i++) {
       buffer[i] = 0;
@@ -149,15 +149,15 @@ class DMXReceiver {
   }
 
   /* Marks the DMX data as being received. */
-  SIC MarkReceived() {
-    SIC r = dataReceived;
+  ISC MarkReceived() {
+    ISC r = dataReceived;
     dataReceived = 0;
     return r;
   }
 
   /* Marks data as being sent. */
-  SIC MarkSent() {
-    SIC r = dataSent;
+  ISC MarkSent() {
+    ISC r = dataSent;
     dataSent = 0;
     return r;
   }
@@ -188,11 +188,11 @@ class DMXReceiver {
   Serial dmx_;                  //< The DMX serial port.
   Timeout timeout_;             //< The timeout timer.
   volatile DMXState state_;     //< The current state.
-  volatile SIC start_channel_,  //< The start DMX channel.
+  volatile ISC start_channel_,  //< The start DMX channel.
       channel_count_,           //< The number of DMX channels.
       index_;                   //< The index in the 512 DMX channels.
-  SIC is_done_;                 //< Flag for if the Rx or Tx process is done.
-  UIA* data_;                   //< Pointer to the data.
+  ISC is_done_;                 //< Flag for if the Rx or Tx process is done.
+  IUA* data_;                   //< Pointer to the data.
 
   void InitTimer() {  //< Initializes the timer.
     switch (state_) {
@@ -225,7 +225,7 @@ class DMXReceiver {
   }
 
   void InitSerial() {
-    SIC flg, dat;
+    ISC flg, dat;
 
     flg = rawSerial->LSR;
 #ifdef DMXserial_DIRECT

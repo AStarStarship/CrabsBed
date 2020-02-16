@@ -2,7 +2,7 @@
 @link    https://github.com/kabuki-starship/kabuki.toolkit.tek.git
 @file    /pot.h
 @author  Cale McCollough <https://calemccollough.github.io>
-@license Copyright 2019 (C) Kabuki Starship (TM) <kabukistarship.com>.
+@license Copyright 2014-20 (C) Kabuki Starship (TM) <kabukistarship.com>.
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 
 2.0. If a copy of the MPL was not distributed with this file, You can obtain one
 at <https://mozilla.org/MPL/2.0/>. */
@@ -17,7 +17,7 @@ namespace _ {
   
 
 @code
-Pot<SIB> pot
+Pot<ISB> pot
 @endcode
 */
 class KABUKI Pot {
@@ -26,8 +26,8 @@ class KABUKI Pot {
   Pot(ch_t channel, PinName adc_pin);
 
   /* Polls the pot. */
-  inline void Poll(UIB new_value, _::Expr* expr, UIB value, UIB min_value,
-                   UIB max_channel);
+  inline void Poll(IUB new_value, _::Expr* expr, IUB value, IUB min_value,
+                   IUB max_channel);
 
   /* Script operations. */
   const _::Operation* Star(char_t index, _::Expr* expr);

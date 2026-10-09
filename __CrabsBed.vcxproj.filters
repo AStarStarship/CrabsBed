@@ -9,109 +9,109 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="_Library.inl">
+    <None Include="_Library.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="_Release.inl">
+    <None Include="_Release.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="_Undef.inl">
+    <None Include="_Undef.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="Button.inl">
+    <None Include="Button.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="Color.inl">
+    <None Include="Color.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="DMXAnimation.inl">
+    <None Include="DMXAnimation.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="DMXBuffer.inl">
+    <None Include="DMXBuffer.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="FlowController.inl">
+    <None Include="FlowController.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="FlyingFader.inl">
+    <None Include="FlyingFader.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="IOExpander.inl">
+    <None Include="IOExpander.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="KnobRotary.inl">
+    <None Include="KnobRotary.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="KnobRotaryBank.inl">
+    <None Include="KnobRotaryBank.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="led.inl">
+    <None Include="led.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="LEDRGB.inl">
+    <None Include="LEDRGB.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="Main.inl">
+    <None Include="Main.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="MicElectrolytic.inl">
+    <None Include="MicElectrolytic.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="MotorHBridge.inl">
+    <None Include="MotorHBridge.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="PortalI2C.inl">
+    <None Include="PortalI2C.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="PortalSerial.inl">
+    <None Include="PortalSerial.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="PortalSPI.inl">
+    <None Include="PortalSPI.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="PortalTCP.inl">
+    <None Include="PortalTCP.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="PortalWifi.inl">
+    <None Include="PortalWifi.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="Pot.inl">
+    <None Include="Pot.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="PotoSensor.inl">
+    <None Include="PotoSensor.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="ReadMe.md">
+    <None Include="README.md">
       <Filter>./</Filter>
     </None>
-    <None Include="Switch.inl">
+    <None Include="Switch.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="Unicontroller.inl">
+    <None Include="Unicontroller.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="_Debug.inl">
+    <None Include="_Debug.hxx">
       <Filter>./</Filter>
     </None>
-    <None Include="_Seams\_Release.inl">
+    <None Include="_Seams\_Release.hxx">
       <Filter>./\_Seams</Filter>
     </None>
-    <None Include="_Seams\_Undef.inl">
+    <None Include="_Seams\_Undef.hxx">
       <Filter>./\_Seams</Filter>
     </None>
-    <None Include="_Seams\00.Core.inl">
+    <None Include="_Seams\00.Core.hxx">
       <Filter>./\_Seams</Filter>
     </None>
-    <None Include="_Seams\All.inl">
+    <None Include="_Seams\All.hxx">
       <Filter>./\_Seams</Filter>
     </None>
-    <None Include="_Seams\ReadMe.md">
+    <None Include="_Seams\README.md">
       <Filter>./\_Seams</Filter>
     </None>
-    <None Include="_Seams\Release.inl">
+    <None Include="_Seams\Release.hxx">
       <Filter>./\_Seams</Filter>
     </None>
-    <None Include="_Seams\_Debug.inl">
+    <None Include="_Seams\_Debug.hxx">
       <Filter>./\_Seams</Filter>
     </None>
   </ItemGroup>

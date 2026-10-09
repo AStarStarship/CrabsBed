@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="./">
+      <UniqueIdentifier>{3aa804bd-2649-4725-b35b-24533a68cb94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="./\_Seams">
+      <UniqueIdentifier>{c9aea5e0-8970-4946-b65f-adac3979ec01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Library.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="_Release.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="_Undef.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="Button.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="Color.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="DMXAnimation.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="DMXBuffer.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="FlowController.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="FlyingFader.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="IOExpander.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="KnobRotary.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="KnobRotaryBank.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="led.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="LEDRGB.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="Main.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="MicElectrolytic.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="MotorHBridge.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="PortalI2C.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="PortalSerial.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="PortalSPI.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="PortalTCP.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="PortalWifi.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="Pot.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="PotoSensor.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>./</Filter>
+    </None>
+    <None Include="Switch.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="Unicontroller.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="_Debug.hxx">
+      <Filter>./</Filter>
+    </None>
+    <None Include="_Seams\_Release.hxx">
+      <Filter>./\_Seams</Filter>
+    </None>
+    <None Include="_Seams\_Undef.hxx">
+      <Filter>./\_Seams</Filter>
+    </None>
+    <None Include="_Seams\00.Core.hxx">
+      <Filter>./\_Seams</Filter>
+    </None>
+    <None Include="_Seams\All.hxx">
+      <Filter>./\_Seams</Filter>
+    </None>
+    <None Include="_Seams\README.md">
+      <Filter>./\_Seams</Filter>
+    </None>
+    <None Include="_Seams\Release.hxx">
+      <Filter>./\_Seams</Filter>
+    </None>
+    <None Include="_Seams\_Debug.hxx">
+      <Filter>./\_Seams</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Button.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.hpp">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="Debouncer.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="DMXAnimation.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="DMXBuffer.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="DMXReceiver.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="DMXTransceiver.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowController.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="FlyingFader.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="IOExpander.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="LED.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="LEDMatrix.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="LEDRGB.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="LEDVUMeter.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="LEDVUMeterArray.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="MicElectrolytic.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="Motorhbridge.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="OctoWS28xx.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="PhotoSensor.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="PortalI2C.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="PortalSerial.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="PortalSPI.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="PortalTCP.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="PortalWifi.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="Pot.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="RGBStatusLED.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="RotaryKnob.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="RotaryKnobBank.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusLED.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="Switch.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="Unicontroller.h">
+      <Filter>./</Filter>
+    </ClInclude>
+    <ClInclude Include="_Config.h">
+      <Filter>./</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_Seams\Main.cpp">
+      <Filter>./\_Seams</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
